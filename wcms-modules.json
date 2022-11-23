@@ -1,0 +1,13 @@
+{
+    "version": 1,
+    "themes": {
+        "theme-name": {
+            "name": "Githyanki",
+            "repo": "https://github.com/yourUsername/theme-name/tree/master",
+            "zip": "https://friendfolio.xyz/data/files/my-theme.zip",
+            "summary": "My sample theme",
+            "version": "0.1.0",
+            "image": "https://raw.githubusercontent.com/yourUsername/theme-name/master/preview.jpg"
+        }
+    }
+}
