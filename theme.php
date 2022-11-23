@@ -32,8 +32,9 @@
 		<!-- Theme CSS -->
 		<link rel="stylesheet" rel="preload" as="style" href="<?= $Wcms->asset('css/style.css') ?>">
 
-		<!-- Optional Bootstrap CSS -->
+		<!-- Optional Bootstrap CSS
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		-->
 
 	</head>
 	
@@ -41,22 +42,50 @@
 		<?= $Wcms->settings() ?>
 		<?= $Wcms->alerts() ?>
 		
-		<?= $Wcms->menu() ?>
+		<div class="sidebar">
+			<section id="topMenu">
+				<div class="inner">
+					<nav>
+						<a id="titlelogo" href="/home">Friend Folio Home</a>
+					
+						<ul class="menu">
+							<!-- Menu -->
+							<?= $Wcms->menu() ?>
+							<li> <a href="https://forum.friendfolio.xyz">Forum</a> </li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+			
+			<img id="sitelogo" src="themes/githyanki/images/sitelogo.png" />
+			
+			
+			<a id="allnk" class="hoverglow" href="/spelunk">Admin Login</a>
 		
-		<a href="<?= $Wcms->url() ?>">
-			<?= $Wcms->siteTitle() ?>
-		</a>
+			<!--
+			<a href="<?= $Wcms->url() ?>">
+				<?= $Wcms->siteTitle() ?>
+			</a>
+			
+			<?= $Wcms->get('config','siteTitle') ?>
+			-->
+		</div>
 		
-		<?= $Wcms->get('config','siteTitle') ?>
+		<div class="body-text">
+			<?= $Wcms->page('content') ?>
+		</div>
 		
-		<?= $Wcms->page('content') ?>
+		<div class="bottom-matter">
+			<?= $Wcms->block('subside') ?>
 		
-		<?= $Wcms->block('subside') ?>
+			<?= $Wcms->footer() ?>
+		</div>
 		
-		<?= $Wcms->footer() ?>
-		
+		<!-- It's not clear if I need either Bootstrap or JQuery. Leave these
+		     commented out until they become necessary.
 		<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		-->
 		<?= $Wcms->js() ?>
 	
 	</body>

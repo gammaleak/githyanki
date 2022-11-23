@@ -1,4 +1,243 @@
-html {
-	 min-height: 100%;
-	 position: relative;
+@font-face {
+    font-family: 'chaucerregular';
+    font-style: normal;
+	font-weight: 400;
+    src: url('../fonts/chaucer-webfont.woff2') format('woff2'),
+         url('../fonts/chaucer-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: 'farringdon';
+	font-style: normal;
+	font-weight: 400;
+    src: url('../fonts/farringdon-roman-webfont.woff2') format('woff2'),
+         url('../fonts/farringdon-roman-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: 'farringdon';
+    font-style: italic;
+	font-weight: 400;
+    src: url('../fonts/farringdon-italic-webfont.woff2') format('woff2'),
+         url('../fonts/farringdon-italic-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: 'farringdon';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/farringdon-bold-webfont.woff2') format('woff2'),
+         url('../fonts/farringdon-bold-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: 'farringdon';
+	font-style: italic;
+	font-weight: 700;
+    src: url('../fonts/farringdon-bolditalic-webfont.woff2') format('woff2'),
+         url('../fonts/farringdon-bolditalic-webfont.woff') format('woff');
+}
+
+html, body, div, span, applet, object,
+iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite,
+code, del, dfn, em, img, ins, kbd, q, s, samp, strike, strong, sub, sup, tt, var, b,
+u, i, center, dl, dt, dd, li, fieldset,
+form, label, legend, caption,
+tfoot, article, aside,
+canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby,
+section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline
+	
+}
+
+html, body {
+	box-shadow: 0 0 200px rgba(0, 0, 0, 0.27) inset;
+	background-image: -webkit-linear-gradient(45deg, rgb(84, 197, 231) 0%, rgb(8, 14, 40) 100%);
+	min-height: 100%;
+	font-family: 'farringdon';
+	color: #fff !important
+}
+
+b {
+	font-family: inherit;
+	font-weight: 700;
+}
+
+i {
+	font-family: inherit;
+	font-style: italic;
+}
+
+.body-text p {
+	margin: 16px;
+}
+
+a {
+	color: #f6c345;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #f6c345;
+	text-decoration:none;
+}
+
+.hoverglow:hover {
+	animation: glow 1s ease-in-out infinite alternate;
+}
+
+.sidebar {
+	margin:				0;
+	padding:			0;
+	width:				400px;
+	height:				100%;
+	background-color:	#201114;
+	position:			fixed;
+	left:				0;
+	top:				0;
+	overflow:			auto;
+}
+
+#topMenu nav ul {
+	height:				inherit;
+	line-height:		inherit;
+	list-style:			none;
+	margin-top:			24px;
+	margin-left:		24px;
+	padding:			0;
+}
+
+#topMenu nav ul li {
+	font-family:		'chaucerregular';
+	font-size:			36px;
+	margin-bottom:		12px;
+}
+
+#titlelogo, #sitelogo {
+	width:				352px;
+}
+
+.sidebar a {
+	display:			block;
+	/* padding:			16px; */
+}
+
+.sidebar a#titlelogo {
+	text-indent:		-9999px;
+    width:				400px;
+    height:				120px;
+    background:			url(/themes/githyanki/images/titlelogo.png);
+    background-size:	contain;
+    background-repeat:	no-repeat;
+}
+
+.sidebar a#titlelogo:hover {
+	width:				400px;
+	height:				120px;
+    background:			url(/themes/githyanki/images/titlelogoglow.png);
+	background-size:	contain;
+	background-repeat:	no-repeat;
+}
+
+.sidebar #topMenu ul li a:hover {
+	animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #937529, 0 0 8px #937529, 0 0 10px #937529, 0 0 12px #937529, 0 0 14px #937529;
+  }
+  
+  to {
+    text-shadow: 0 0 4px #fff, 0 0 6px #f6c345, 0 0 8px #f6c345, 0 0 10px #f6c345, 0 0 12px #f6c345, 0 0 14px #f6c345, 0 0 16px #f6c345;
+  }
+}
+
+.sidebar img#sitelogo {
+	position: 			absolute;
+	bottom:				75px;
+	margin-left:		24px;
+	margin-bottom:		24px;
+}
+
+.sidebar a#allnk {
+	font-family:		'chaucerregular';
+	font-size:			36px;
+	position:			absolute;
+	bottom:				0px;
+	margin-left:		24px;
+	margin-bottom:		24px;
+}
+
+.body-text {
+	margin-left:		400px;
+	padding:			1px 16px;
+	height:				100%;
+}
+
+.bottom-matter {
+	margin-top:			48px;
+	margin-left:		410px;
+	margin-right:		10px;
+	border-top:			6px solid #201114;
+	padding:			6px 16px;
+}
+
+@media screen and (max-height: 1000px) {
+	.sidebar img#sitelogo {
+		width: 180px;
+	}
+}
+
+@media screen and (max-height: 800px) {
+	.sidebar img#sitelogo {
+		position: 		relative;
+		width:			1px;
+		visibility:		hidden;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.sidebar {
+		width:			100%;
+		height:			auto;
+		position:		relative;
+	}
+	
+	.sidebar a {
+		float:			left;
+		margin-left: 	12px;
+		margin-right:	12px;
+	}
+	
+	.sidebar img#sitelogo {
+		position: 		relative;
+		width:			1px;
+		visibility:		hidden;
+	}
+	
+	.sidebar a#allnk {
+		position:		relative;
+	}
+	
+	.body-text, .bottom-matter {
+		margin-left:	0;
+		margin-right:	0;
+	}
+	
+	.homeheader {
+		width:			1px;
+		height:			1px;
+		visibility:		hidden;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.sidebar a {
+		text-align:		center;
+		float:			none;
+	}
 }
