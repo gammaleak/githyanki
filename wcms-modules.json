@@ -4,7 +4,7 @@
         "theme-name": {
             "name": "Githyanki",
             "repo": "https://github.com/gammaleak/githyanki/tree/master",
-            "zip": "https://github.com/gammaleak/githyanki/releases/download/0.1.0/githyanki-0.1.0.zip",
+            "zip": "https://github.com/gammaleak/githyanki/releases/download/0.1.0/githyanki-latest.zip",
             "summary": "A Wonder CMS Theme for Macho Wizards",
             "version": "0.1.0",
             "image": "https://github.com/gammaleak/githyanki/raw/main/preview.jpg"
