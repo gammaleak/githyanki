@@ -3,11 +3,11 @@
     "themes": {
         "theme-name": {
             "name": "Githyanki",
-            "repo": "https://github.com/yourUsername/theme-name/tree/master",
-            "zip": "https://friendfolio.xyz/data/files/my-theme.zip",
-            "summary": "My sample theme",
+            "repo": "https://github.com/gammaleak/githyanki/tree/master",
+            "zip": "https://github.com/gammaleak/githyanki/releases/download/0.1.0/githyanki-0.1.0.zip",
+            "summary": "A Wonder CMS Theme for Macho Wizards",
             "version": "0.1.0",
-            "image": "https://raw.githubusercontent.com/yourUsername/theme-name/master/preview.jpg"
+            "image": "https://github.com/gammaleak/githyanki/raw/main/preview.jpg"
         }
     }
 }
